@@ -1,0 +1,43 @@
+						Parquet và ứng dụng demo
+Chào thầy và các bạn hôm nay chúng em tiến hành thực hiện demo đọc, ghi file parquet trong hadoop mô hình hadoop mapreduce
+
+Chúng em tiến hành thực hiện theo yêu cầu
+- Chuyển file csv sang parquet (có tổng cộng 5 file csv, chúng em chọn file train.csv - 5,7gb để tiến hành chạy demo này) 
+- Chúng em nghiên cứu tìm hiểu và thực hiện được 2 cách chuyển file
+	+ Cách 1: Chuyển bằng thư viện pandas của python sử dụng jupiter (vì chuyển hơi lâu nên đã chạy trước)
+
+	+ Cách 2: Chuyển file trong hadoop mô hình Mapreduce
+
+- Demo
+	Bước 1: Tiến hành chuyển file theo cách 1 - chuyển thành công
+
+	Bước 2: Bật ubuntu, bật mô hình hadoop mapreduce - bật thành công
+		
+	Bước 3: Chuyển file train.csv từ local vào hdfs và tiến hành chuyển thành file theo cách 2
+		ở đây chúng em cài đặt samba để share file giữa 2 máy, địa chỉ ip đó chính là thư mục của máy ubuntu được share với
+		windows, kiểm tra trong ubuntu - đã có file
+		
+		kiểm tra thư mục hdfs
+		
+		vì dung lượng ổ cứng không đủ nên chỉ copy file parquet trước để tiếp tục cái demo này	
+		
+		tạo 1 thư mục scala mới trong hdfs
+		- copy file từ local sang hdfs - thành công
+
+
+	Bước 4: Dùng parquet tool để xem thông tin của file vừa chuyển
+		kiểm tra 1 vài thông tin của file, xem có bao nhiêu dòng hơn 101 triệu dòng
+		xem meta
+
+	Bước 5: Load, xem thuộc tính của file parquet bằng scala
+		load file bằng scala, khởi động spark-shell
+		tiến hành đọc file, đọc thành công
+
+	Bước 6: Thực hiện truy vấn trên file parquet
+		Chúng ta xem nội dung trong file csv, đây là file csv chúng ta chọn 2 thuộc tính để truy vấn cơ bản
+
+	Đây là những câu truy vấn cơ bản trên file parquet sử dụng hadoop mapreduce
+
+
+
+Cảm ơn thầy và các bạn đã quan tâm theo dõi
